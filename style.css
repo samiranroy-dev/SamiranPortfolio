@@ -120,7 +120,7 @@ section {
     width: 100%;
     min-height: 100vh;
     padding: 100px 0 50px 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .fade-in {
@@ -131,14 +131,14 @@ section {
     width: 100%;
     min-height: 90vh;
     display: flex;
-    flex-direction: row-reverse; /* Update 1 */
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
 }
 
 .main-container .image {
-    width: 45%; /* Update 2 */
+    width: 45%;
     max-width: 500px;
     height: auto;
     aspect-ratio: 1;
@@ -170,7 +170,7 @@ section {
 }
 
 .main-container .content {
-    width: 50%; /* Update 3 */
+    width: 50%;
     padding-right: 5%;
 }
 
@@ -248,12 +248,20 @@ section {
     background-color: #000;
     color: #fff;
     padding: 80px 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.about-container {
+.about-container,
+.contact-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-container:hover,
+.contact-container:hover {
+    transform: translateY(-5px);
 }
 
 .about-grid {
@@ -337,7 +345,7 @@ section {
 
 .experience-content h3,
 .education-content h3 {
-    color: #5c73b1; /* This is the green color used in other parts of the design */
+    color: #5c73b1;
 }
 
 .skill-item p {
@@ -400,12 +408,6 @@ section {
 #contact {
     padding: 80px 0;
     background-color: #000;
-}
-
-.contact-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 .contact-grid {

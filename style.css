@@ -331,13 +331,13 @@ section {
 }
 
 .skill-item h3 {
-    color: #DC1258;
+    color: #5373bd;
     margin-bottom: 5px;
 }
 
 .experience-content h3,
 .education-content h3 {
-    color: #077b32; /* This is the green color used in other parts of the design */
+    color: #5c73b1; /* This is the green color used in other parts of the design */
 }
 
 .skill-item p {

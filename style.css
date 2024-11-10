@@ -608,3 +608,28 @@ section {
         margin-top: 15px;
     }
 }
+
+/* Contact Form Styles */
+.success-message {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.error-message {
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.error-message ul {
+    margin: 5px 0 0 20px;
+}
+
+#form-response {
+    margin-top: 20px;
+}

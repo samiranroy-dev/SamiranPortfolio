@@ -146,3 +146,32 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+// Contact Form Handling
+document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const formData = new FormData(this);
+  
+  fetch('contact.php', {
+      method: 'POST',
+      body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+      const responseElement = document.getElementById('form-response');
+      if (data.success) {
+          responseElement.innerHTML = `<div class="success-message">${data.message}</div>`;
+          this.reset();
+      } else {
+          let errorMessage = data.message;
+          if (data.errors) {
+              errorMessage += '<ul>' + data.errors.map(error => `<li>${error}</li>`).join('') + '</ul>';
+          }
+          responseElement.innerHTML = `<div class="error-message">${errorMessage}</div>`;
+      }
+  })
+  .catch(error => {
+      console.error('Error:', error);
+      document.getElementById('form-response').innerHTML = '<div class="error-message">An error occurred. Please try again later.</div>';
+  });
+});

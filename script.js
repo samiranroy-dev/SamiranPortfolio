@@ -243,7 +243,7 @@ function initContactForm() {
     downloadButton.addEventListener('click', function() {
       // This would normally trigger a download
       // For demo purposes, we'll just show an alert
-      alert('CV download would start now. Replace with actual download link.');
+      alert('CV download would start now.');
     });
   }
 }
@@ -267,3 +267,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
